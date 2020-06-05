@@ -1,0 +1,16 @@
+{
+    "private": true,
+    "scripts": {
+        "init": "yarn install --frozen-lockfile",
+        "build:dev": "yarn workspaces run build:dev",
+        "build:prod": "yarn workspaces run build:prod",
+        "publish": "yarn workspaces run publish-now",
+        "test": "yarn workspaces run test"
+    },
+    "workspaces": [
+        "packages/collections",
+        "packages/rpc-client",
+        "packages/validation"
+    ],
+    "devDependencies": {}
+}

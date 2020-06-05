@@ -1,0 +1,9 @@
+{
+    "extends": "../../../tsconfig.json",
+    "compilerOptions": {
+        "declarationDir": "../types",
+        "baseUrl": ".",
+        "declaration": true,
+        "module": "esnext"
+    }
+}
