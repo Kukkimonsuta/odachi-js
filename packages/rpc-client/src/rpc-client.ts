@@ -6,7 +6,19 @@ import { RpcClientError } from './rpc-client-error';
 let _requestId = 0x1000;
 
 function serializeToObject(key: string | null, data: unknown, binaryPayload: FormData): unknown {
-	const type = typeof data;
+	let type = typeof data;
+
+	if (type === 'undefined' || data === null) {
+		return null;
+	}
+
+	if (type === 'object' && data !== null && typeof (data as any).toJSON === 'function') {
+		// ignore moment as it would convert to UTC which would be breaking for us right now
+		if ((data as any)._isAMomentObject !== true) {
+			data = (data as any).toJSON('');
+			type = typeof data;
+		}
+	}
 
 	if (type === 'undefined' || data === null) {
 		return null;
