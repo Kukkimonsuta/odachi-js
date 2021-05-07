@@ -1,6 +1,6 @@
 {
   "name": "@odachi/rpc-client",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "dist/index.js",
   "repository": "https://github.com/Kukkimonsuta/odachi-js",
   "author": "Lukáš Novotný",
