@@ -4,7 +4,9 @@
         "init": "yarn install --frozen-lockfile",
         "build:dev": "yarn workspaces run build:dev",
         "build:prod": "yarn workspaces run build:prod",
-        "publish": "yarn workspaces run publish-now",
+        "publish-patch": "yarn workspaces run publish-patch",
+        "publish-minor": "yarn workspaces run publish-minor",
+        "publish-major": "yarn workspaces run publish-major",
         "test": "yarn workspaces run test"
     },
     "workspaces": [
